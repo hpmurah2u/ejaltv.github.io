@@ -1,516 +1,635 @@
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
- background:   #0000b3;
- margin: 0;
- padding: 10px;
- font-family: 'Public Sans', sans-serif; 
-}
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 2000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #ff33ff;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-</style>
-</head>
-<body>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/Black%20Adam%20438x153.png" style="width:100%">
-  <div class="text">Black Adam (2022)</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/megan%20438x153.jpg" style="width:100%">
-  <div class="text">Megan (2022)</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/poster%20plane%20438x153.jpg" style="width:100%">
-  <div class="text">Plane (2023)</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-</body>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>EjalTV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
-
-  <script src="main.js"></script>
-</head>
-<body>
-  <div class="wrapper">
-
-    <!-- HEADER -->
-    <header>
-      <div class="netflixLogo">
-        <a id="logo" href="https://hpmurah2u.github.io/ejaltv.github.io/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/logo%20ejal%20tv%20baru%20149x70.png?raw=true" alt="Logo Image"></a>
-       <marquee style='font-family:arial; font-size:26px; color: #ffff00;'>Selamat datang ke EJalTV..Untuk info..Channel-channel astro,kalau nak tukar subtitle or audio boleh pegi kat titik 3 bertingkat kat player channel tu ye..harap maklum</marquee>	
-     </div>      
-     
-     <html> 
-  <head> 
-  <title> Innovel | Home </title> 
-  <meta charset = "utf-8"> 
-  <head> 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> 
-    <link rel = "stylesheet" type = "text/css" href= "stylesheettest.css" /> 
-	<style type = "text/css"> 
- 
-		body { 
-            margin: 0; 
-		    width: 100%; 
-		} 
- 
-		.img1 { 
-		    position: b; 
-		    margin: 10px; 
-			margin-left: 10px; 
-			 
-		 
-		} 
-		.nav { 
-		    position a; 
-		    background-color: #ffffff; 
-		    margin: 0; 
- 
-		} 
-	    .nav ul { 
-			margin: 10px; 
-		    padding: 0px; 
-			text-align: center; 
-			 
-		} 
-		.nav ul li { 
-			list-style: none; 
-			display: inline; 
-			padding: 5px 30px; 
-		 
-		} 
-		.nav ul li a { 
-		    text-decoration: none; 
-			color: #000000; 
-			font-size: 200%; 
-			font-family: "Arial Black", Gadget, sans-serif; 
-        } 
-		.nav ul li a:hover { 
-			color:  
-
- #ff0000; 
-			text-decoration: none; 
- 
-		} 
-		.nav ul li a.current { 
-			color: #282828; 
-			text-decoration: underline; 
-			font-family: Tahoma,Verdana,Segoe,sans-serif; 
-		} 
-	 
-	 
-   
-   
-    </style> 
-  </head> 
-  <body> 
-      <div id = "container"> 
-       
-	 	 <div class = "nav"> 
-		<ul> 
-			<li><a href="https://hpmurah2u.github.io/hpmurah2u.github.io-livetv/"> ALL LIVE TV</a></li> 
-			<li><a href="national.html"> SERIES </a></li> 
-			<li><a href="whyus.html"> VOD </a></li> 
-			<li><a href="placead.html"> MOVIES </a></li> 
-			      <!--local, regional, and national ads in drop-down id--> 
-		
-				  
-		</ul> 
-		</div> 
-       </div> 
- 
- 
-  </body> 
- 
-</html> 
-    </header>
-    <!-- END OF HEADER -->
-    
-    <!-- MAIN CONTAINER -->
-    <section class="main-container" >
-      <div class="location" id="home">
-          <h1 id="home">LIVE TV-Sport</h1>
-          <div class="box">
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-assp/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/APL%20(1).png?raw=true" alt="premierleague"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-assp2/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/apl2%20(1).png?raw=true" alt="premierleague2"></a>
-            <a href="https://hpmurah2u.github.io/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/grandstand%20(1).png?raw=true" alt="grandstand"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-assp4/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/football%20(1).png?raw=true" alt="football"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-assp5/"><img src="https://resizer-acm.eco.astro.com.my/tr:w-256,q:100/https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/503_144.png?raw=true" alt="assp5"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-arena/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/arena%20new%20(1).png?raw=true" alt="arena"></a>
-    
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-arena2/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/arena%202%20new%20(1).png?raw=true" alt="arena2"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-arenabola/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/arenabolanew%20(1).png?raw=true" alt="arenabola"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-arenabola2/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/refs/heads/PEJAL/arenabola2%20new%20(1).png?raw=true" alt="arenabola2"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-arenabola3/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/arenabola3%20290x157.png?raw=true" alt="arenabola3"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-arenabola4/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/arenabola4%20290x157.png?raw=true" alt="arenabola4"></a>
-            <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-wwe/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/WWE%20290x157.png?raw=true" alt="wwe"></a>        
-          </div>
-      </div>
-      
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-.button {
-  border: none;
-  color: yellow;
-  padding: 15px 32px;
-  text-align: centre;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Online</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Dark blue background */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #001a35; /* Slightly darker blue */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .header img {
+            height: auto;
+            max-height: 70px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .channel {
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 8px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .channel:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+
+        .channel img {
+            width: 100%;
+            height: auto;
+            max-height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .channel span {
+            display: block;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #fff; /* Change channel name text color to white */
+            text-decoration: none; /* Remove underline from channel names */
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: auto;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #f33;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<a href="https://hpmurah2u.github.io/hpmurah2u.github.io-livetv/" class="button">More Channel >></a>
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/logo%20ejal%20tv%20baru%20149x70.png?raw=true" alt="Ejal TV Logo">
+    </div>
 
+    <div class="container">
+        <!-- 50 channel tiles with URLs -->
+        <a href="https://rtm-player.glueapi.io/latest/h/1" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/395_144.png" alt="TV1">
+            <span>TV1</span>
+        </a>
+        <a href="https://rtm-player.glueapi.io/latest/h/2" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/396_144.png" alt="TV2">
+            <span>TV2</span>
+        </a>
+        <a href="https://rozo.loginto.me/tv3.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/106_144.png" alt="TV3">
+            <span>TV3</span>
+        </a>
+        <a href="https://rtm-player.glueapi.io/latest/h/6" target="_blank" class="channel">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/TV6_RTM.png" alt="TV6">
+            <span>TV6</span>
+        </a>
+        <a href="https://myvi.servebeer.com/didiktv" target="_blank" class="channel">
+            <img src="https://www.tvmalaysia.live/images/didiktv-live-streaming-online.webp" alt="Didik TV">
+            <span>Didik TV</span>
+        </a>
+        <a href="https://rozo.loginto.me/8tv" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/115_144.png" alt="8TV">
+            <span>8TV</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-tv9/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/48_144.png" alt="TV9">
+            <span>TV9</span>
+        </a>
+        <a href="https://rozo.loginto.me/alhijrah.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/149_144.png" alt="Al-Hijrah">
+            <span>Al-Hijrah</span>
+        </a>
+        <a href="https://astro.com.my/channel8" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/93_144.png" alt="NTV7">
+            <span>NTV7</span>
+        </a>
+        <a href="https://myvi.servebeer.com/tvs.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/429_144.png" alt="TVS">
+            <span>TVS</span>
+        </a>
+        <a href="https://myvi.servebeer.com/token/riaz.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/193_144.png" alt="Astro Ria">
+            <span>Astro Ria</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-prima/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/316_144.png" alt="Astro Prima">
+            <span>Astro Prima</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-citra/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/301_144.png" alt="Astro Citra">
+            <span>Astro Citra</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-oasis/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/315_144.png" alt="Astro Oasis">
+            <span>Astro Oasis</span>
+        </a>
+        <a href="https://rozo.loginto.me/aura.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/400_144.png" alt="Astro Aura">
+            <span>Astro Aura</span>
+        </a>
+        <a href="https://rozo.loginto.me/rania.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/401_144.png" alt="Astro Rania">
+            <span>Astro Rania</span>
+        </a>
+        <a href="https://rtm-player.glueapi.io/latest/h/3" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/467_144.png" alt="TV Okey HD">
+            <span>TV Okey HD</span>
+        </a>
+        <a href="https://bosiptv.com/sp/801.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/235_144.png" alt="Astro Arena">
+            <span>Astro Arena</span>
+        </a>
+        <a href="https://rozo.loginto.me/arena2.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/457_144.png" alt="Astro Arena 2">
+            <span>Astro Arena 2</span>
+        </a>
+        <a href="https://myvi.servebeer.com/sports/arenabola1.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/486_144.png" alt="Arena Bola">
+            <span>Arena Bola</span>
+        </a>
+        <a href="https://myvi.servebeer.com/sports/arenabola2.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/487_144.png" alt="Arena Bola 2">
+            <span>Arena Bola 2</span>
+        </a>
+        <a href="https://myvi.servebeer.com/sports/grandstand.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/543_144.png" alt="Astro Grandstand">
+            <span>Astro Grandstand</span>
+        </a>
+        <a href="https://myvi.servebeer.com/sports/premierleague.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/536_144.png" alt="Astro Premier League">
+            <span>Astro Premier League</span>
+        </a>
+        <a href="https://myvi.servebeer.com/sports/premierleague2.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/537_144.png" alt="Astro Premier League 2">
+            <span>Astro Premier League 2</span>
+        </a>
+        <a href="https://astro.com.my/channel23" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/538_144.png" alt="Astro Premier League 3">
+            <span>Astro Premier League 3</span>
+        </a>
+        <a href="https://astro.com.my/channel24" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/568_144.png" alt="Astro Premier League 4">
+            <span>Astro Premier League 4</span>
+        </a>
+        <a href="https://rozo.loginto.me/football.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/539_144.png" alt="Astro Football">
+            <span>Astro Football</span>
+        </a>
+        <a href="https://bosiptv.com/sp/AstroBadminton.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/540_144.png" alt="Astro Badminton">
+            <span>Astro Badminton</span>
+        </a>
+        <a href="https://bosiptv.com/sp/AstroBadminton2.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/541_144.png" alt="Astro Badminton 2">
+            <span>Astro Badminton 2</span>
+        </a>
+        <a href="https://bosiptv.com/sp/AstroSportsPlus.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/542_144.png" alt="Astro Sports Plus">
+            <span>Astro Sports Plus</span>
+        </a>
+        <a href="https://rtm-player.glueapi.io/latest/h/4" target="_blank" class="channel">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/b/b2/Sukan_RTM_1_April.png" alt="Sukan RTM">
+            <span>Sukan RTM</span>
+        </a>
+        <a href="https://bosiptv.com/sp/bein2.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/236_144.png" alt="beIN Sports 1">
+            <span>beIN Sports 1</span>
+        </a>
+        <a href="https://bosiptv.com/sp/bein.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/466_144.png" alt="beIN Sports 2">
+            <span>beIN Sports 1</span>
+        </a>
+        <a href="https://bosiptv.com/sp/bein3.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/313_144.png" alt="beIN Sports 3">
+            <span>beIN Sports 3</span>
+        </a>
+        <a href="https://bosiptv.com/sp/spotv.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/456_144.png" alt="SPOTV">
+            <span>SPOTV</span>
+        </a>
+        <a href="https://bosiptv.com/sp/spotv2.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/474_144.png" alt="SPOTV2">
+            <span>SPOTV2</span>
+        </a>
+        <a href="https://astro.com.my/channel34" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/339_144.png" alt="Eurosport">
+            <span>Eurosport</span>
+        </a>
+        <a href="https://astro.com.my/channel35" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/503_144.png" alt="W-Sport">
+            <span>W-Sport</span>
+        </a>
+        <a href="https://bosiptv.com/sp/Premiersport.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/393_144.png" alt="Premier Sports Rugby">
+            <span>Premier Sports Rugby</span>
+        </a>
+        <a href="https://astro.com.my/channel36" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/189_144.png" alt="Golf Channel">
+            <span>Golf Channel</span>
+        </a>
+        <a href="https://bosiptv.com/sp/Cricket.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/197_144.png" alt="Astro Cricket">
+            <span>Astro Cricket</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-wwe/" target="_blank" class="channel">
+            <img src="https://github.com/hpmurah2u/pejal/blob/PEJAL/WWE%20290x157.png?raw=true" alt="WWE Network HD">
+            <span>WWE Network HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/hits.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/179_144.png" alt="HITS HD">
+            <span>HITS HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/hitsnow.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/524_144.png" alt="HITS NOW">
+            <span>HITS NOW</span>
+        </a>
+        <a href="https://rozo.loginto.me/hitsmov.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/391_144.png" alt="HITS Movies">
+            <span>HITS Movies</span>
+        </a>
+        <a href="https://rozo.loginto.me/boo.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/251_144.png" alt="Astro Boo">
+            <span>Astro Boo</span>
+        </a>
+        <a href="https://rozo.loginto.me/hbo.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/143_144.png" alt="HBO">
+            <span>HBO</span>
+        </a>
+        <a href="https://rozo.loginto.me/cinem.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/337_144.png" alt="Cinemax">
+            <span>Cinemax</span>
+        </a>
+        <a href="https://rozo.loginto.me/showcase.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/454_144.png" alt="Astro Showcase">
+            <span>Astro Showcase</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-hbofamily/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/450_144.png" alt="HBO Family">
+            <span>HBO Family</span>
+        </a>
+        <a href="https://rozo.loginto.me/hbohits.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/449_144.png" alt="HBO Hits">
+            <span>HBO Hits</span>
+        </a>
+        <a href="https://rozo.loginto.me/tvnmovies.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/274_144.png" alt="tvN Movies">
+            <span>tvN Movies</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-awani/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/436_144.png" alt="Astro Awani">
+            <span>Astro Awani</span>
+        </a>
+        <a href="https://rtm-player.glueapi.io/latest/h/5" target="_blank" class="channel">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/7/72/Berita_RTM_v2.png" alt="Berita RTM">
+            <span>Berita RTM</span>
+        </a>
+        <a href="https://astro.com.my/channel47" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/160_144.png" alt="Bernama TV">
+            <span>Bernama TV</span>
+        </a>
+        <a href="https://astro.com.my/channel48" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/426_144.png" alt="CGTN">
+            <span>CGTN</span>
+        </a>
+        <a href="https://astro.com.my/channel49" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/336_144.png" alt="CNN HD">
+            <span>CNN HD</span>
+        </a>
+        <a href="https://astro.com.my/channel50" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/366_144.png" alt="BBC News HD">
+            <span>BBC News HD</span>
+        </a>
+        <a href="https://astro.com.my/channel50" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/374_144.png" alt="Al Jazeera English HD">
+            <span>Al Jazeera English HD</span>
+        </a>
+        <a href="https://astro.com.my/channel50" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/155_144.png" alt="Sky News HD">
+            <span>Sky News HD</span>
+        </a>
+        <a href="https://astro.com.my/channel50" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/295_144.png" alt="CNA HD">
+            <span>CNA HD</span>
+        </a>
+        <a href="https://astro.com.my/channel50" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/423_144.png" alt="CNBC Asia HD">
+            <span>CNBC Asia HD</span>
+        </a>
+        <a href="https://astro.com.my/channel50" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/422_144.png" alt="Bloomberg TV HD">
+            <span>Bloomberg TV HD</span>
+        </a>
+        <a href="https://astro.com.my/channel50" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/461_144.png" alt="ABC Australia HD">
+            <span>ABC Australia HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/lovnat.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/483_144.png" alt="Love Nature">
+            <span>Love Nature</span>
+        </a>
+        <a href="https://myvi.servebeer.com/globaltrekker.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/482_144.png" alt="Global Trekker">
+            <span>Global Trekker</span>
+        </a>
+        <a href="https://rozo.loginto.me/discov.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/376_144.png" alt="Discovery Channel HD">
+            <span>Discovery Channel HD</span>
+        </a>
+       <a href="https://rozo.loginto.me/discoasia.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/136_144.png" alt="Discovery Asia HD">
+            <span>Discovery Asia HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/bbcearth.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/452_144.png" alt="BBC Earth">
+            <span>BBC Earth</span>
+        </a>
+        <a href="https://rozo.loginto.me/history.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/144_144.png" alt="History HD">
+            <span>History HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/animpla.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/377_144.png" alt="Animal Planet HD">
+            <span>Animal Planet HD</span>
+        </a>
+       <a href="https://myvi.servebeer.com/tutortvsmk.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/411_144.png" alt="Astro Tutor TV">
+            <span>Astro Tutor TV</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-ceria/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/386_144.png" alt="Astro Ceria">
+            <span>Astro Ceria</span>
+        </a>
+        <a href="https://rozo.loginto.me/dreamworks.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/485_144.png" alt="DreamWorks">
+            <span>DreamWorks</span>
+        </a>
+        <a href="https://rozo.loginto.me/carnet.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/371_144.png" alt="Cartoon Network HD">
+            <span>Cartoon Network HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/nicklo.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/370_144.png" alt="Nickelodeon HD">
+            <span>Nickelodeon HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/nickjr.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/392_144.png" alt="Nick Jr.">
+            <span>Nick Jr.</span>
+        </a>
+        <a href="https://myvi.servebeer.com/moonbug.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/465_144.png" alt="Moonbug">
+            <span>Moonbug</span>
+        </a>
+        <a href="https://astro.com.my/channel39" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/566_144.png" alt="Blippi & Friends">
+            <span>Blippi & Friends</span>
+        </a>
+        <a href="https://myvi.servebeer.com/ceebies.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/481_144.png" alt="CBeebies">
+            <span>CBeebies</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-axn/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/131_144.png" alt="AXN HD">
+            <span>AXN HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/lifetime.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/447_144.png" alt="Lifetime HD">
+            <span>Lifetime HD</span>
+        </a>    
+        <a href="https://rozo.loginto.me/tlc.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/338_144.png" alt="TLC HD">
+            <span>TLC HD</span>
+        </a>
+       <a href="https://rozo.loginto.me/food.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/153_144.png" alt="Food Network HD">
+            <span>Food Network HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/afc.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/91_144.png" alt="Asian Food Network HD">
+            <span>Asian Food Network HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/warner.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/270_144.png" alt="Warner TV HD">
+            <span>Warner TV HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/crime.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/369_144.png" alt="Crime & Investigation HD">
+            <span>Crime & Investigation HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/hgtv.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/198_144.png" alt="HGTV HD">
+            <span>HGTV HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/dmax.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/367_144.png" alt="DMAX HD">
+            <span>DMAX HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/bbclifestyle.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/451_144.png" alt="BBC Lifestyle HD">
+            <span>BBC Lifestyle HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/mtv.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/420_144.png" alt="MTV Live">
+            <span>MTV Live</span>
+        </a>
+        <a href="https://rozo.loginto.me/animax.html" target="_blank" class="channel">
+            <img src="https://www.tvmalaysia.live/images/animax-live-streaming-online.webp" alt="Animax">
+            <span>Animax</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/397_144.png" alt="Astro Vaanavil">
+            <span>Astro Vaanavil</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/167_144.png" alt="Astro Vinmeen">
+            <span>Astro Vinmeen</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/399_144.png" alt="Astro Vellithirai HD">
+            <span>Astro Vellithirai HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/suntv.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/358_144.png" alt="Sun TV HD">
+            <span>Sun TV HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/sunmusic.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/417_144.png" alt="Sun Music HD">
+            <span>Sun Music HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/67_144.png" alt="Adithya">
+            <span>Adithya</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/478_144.png" alt="Sun News">
+            <span>Sun News</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/477_144.png" alt="KTV">
+            <span>KTV</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/476_144.png" alt="Sun Life">
+            <span>Sun Life</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/357_144.png" alt="Star Vijay HD">
+            <span>Star Vijay HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/298_144.png" alt="Colors Tamil HD">
+            <span>Colors Tamil HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/colorshindi.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/365_144.png" alt="Colors Hindi HD">
+            <span>Colors Hindi HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/zeetamil.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/297_144.png" alt="Zee Tamil HD">
+            <span>Zee Tamil HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/177_144.png" alt="Astro Thangathirai HD">
+            <span>Astro Thangathirai HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/zeecinema.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/490_144.png" alt="Zee Cinema">
+            <span>Zee Cinema</span>
+        </a>
+        <a href="https://rozo.loginto.me/iqiyi.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/355_144.png" alt="iQIYI HD">
+            <span>iQIYI HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/tvbclassic.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/425_144.png" alt="TVB Classic HD">
+            <span>TVB Classic HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/182_144.png" alt="Astro AEC">
+            <span>Astro AEC</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/158_144.png" alt="Astro QJ">
+            <span>Astro QJ</span>
+        </a>
+        <a href="https://rozo.loginto.me/celestialmovies.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/134_144.png" alt="Celestial Movies HD">
+            <span>Celestial Movies HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/203_144.png" alt="TVB Jade">
+            <span>TVB Jade</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/172_144.png" alt="Astro AOD">
+            <span>Astro AOD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/424_144.png" alt="CTi Asia HD">
+            <span>CTi Asia HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/427_144.png" alt="TVB Entertainment News HD">
+            <span>TVB Entertainment News HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/383_144.png" alt="TVB Xing He HD">
+            <span>TVB Xing He HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/384_144.png" alt="TVBS Asia HD">
+            <span>TVBS Asia HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/ccm.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/187_144.png" alt="Celestial Classic Movies">
+            <span>Celestial Classic Movies</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/382_144.png" alt="Phoenix Chinese Channel HD">
+            <span>Phoenix Chinese Channel HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/43_144.png" alt="Phoenix Info News Channel HD">
+            <span>Phoenix Info News Channel HD</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/162_144.png" alt="Astro Hua Hee Dai">
+            <span>Astro Hua Hee Dai</span>
+        </a>
+        <a href="https://astro.com.my/channel41" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/385_144.png" alt="CCTV-4 HD">
+            <span>CCTV-4 HD</span>
+        </a>
+        <a href="https://rozo.loginto.me/kbsworld.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/161_144.png" alt="KBS World HD">
+            <span>KBS World HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/one.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/133_144.png" alt="ONE HD">
+            <span>ONE HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/tvn.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/190_144.png" alt="tvN HD">
+            <span>tvN HD</span>
+        </a>
+        <a href="https://myvi.servebeer.com/kplus.html" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/266_144.png" alt="K-Plus HD">
+            <span>K-Plus HD</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-kplus/" target="_blank" class="channel">
+            <img src="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/428_144.png" alt="NHK World Premium">
+            <span>NHK World Premium</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-duniasinema/" target="_blank" class="channel">
+            <img src="https://github.com/hpmurah2u/pejal/blob/PEJAL/dunia%20sinema%20290x157.png?raw=true" alt="Dunia Sinema HD">
+            <span>Dunia Sinema HD</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-inspirasi/" target="_blank" class="channel">
+            <img src="https://github.com/hpmurah2u/pejal/blob/PEJAL/Unifi_Inspirasi%20290x157.png?raw=true" alt="Inspirasi">
+            <span>Inspirasi</span>
+        </a>
+        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-assp-iphone/" target="_blank" class="channel">
+            <img src="https://telegra.ph/file/bc1b672e48872ae3d4072.png?raw=true" alt="Astro Live Event 1">
+            <span>Astro Live Event 1</span>
+        </a>
+        <a href="https://rozo.loginto.me/unifisiar.html" target="_blank" class="channel">
+            <img src="https://www.tvmalaysia.live/images/unifi-siar.webp" alt="SIAR">
+            <span>SIAR</span>
+        </a>
+    </div>
 
-</body>
-</html>
-
-
-
-      <h1 id="myList">LIVE TV-Malaysia</h1>
-      <div class="box">
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-tv1/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/tv1%20290x157.png?raw=true" alt="tv1"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-tv2/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/tv2%20290x157.png?raw=true" alt="tv2"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-tv3/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/TV3%20290x157.png?raw=true" alt="tv3"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-tv9/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/TV9%20290x157.png?raw=true" alt="tv9"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-hijrah/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/Al-Hijrah%20290x157.png?raw=true" alt="alhijrah"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-awani/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/Astro_Awani%20290x157.png?raw=true" alt="awani"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-awesome/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/awesome%20290x157.png?raw=true" alt="awesometv"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-prima/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/prima%20290x157.png?raw=true" alt="prima"></a> 
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-oasis/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/oasis%20290x157.png?raw=true" alt="oasis"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-ceria/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/ceria%20290x157.png?raw=true" alt="ceria"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-hbo/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/hbo%20290x157.png?raw=true" alt="hbo"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-boo/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/boo%20290x157.png?raw=true" alt="boo"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-axn/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/axn%20290x157.png?raw=true" alt="axn"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-hgtv/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/hgtv%20290x157.png?raw=true" alt="hgtv"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-kbsworld/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/kbs%20world%20290x157.png?raw=true" alt="kbsworld"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-tvn/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/tvn%20290x157.png?raw=true" alt="tvn"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-bollyone/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/BollyOne%20%20290x157.png?raw=true" alt="bollyone"></a>
-     </div>
-  <!DOCTYPE html>
-<html>
-<head>
-<style>
-.button {
-  border: none;
-  color: yellow;
-  padding: 15px 32px;
-  text-align: centre;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
-</head>
-<body>
-
-<a href="https://hpmurah2u.github.io/hpmurah2u.github.io-livetv/" class="button">More Channel >></a>
-
-
-</body>
-</html>
-
-
-
-  
-      <h1 id="tvShows">Movies</h1>
-      <div class="box">
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-megan/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/megan%202023%20290x157.jpg?raw=true" alt="megan"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-plane/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/plane2023%20290x157.jpg?raw=true" alt="plane"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-ifinethankyou/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/ifinethankyou%20290x157.jpg?raw=true" alt="ifinethankyou"></a>
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-insi2023/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/insi2023%20290.jpg?raw=true" alt="insidious"></a> 
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-pe3/"><img src="https://github.com/hpmurah2u/pejal/blob/PEJAL/polisevo3.jpg?raw=true?raw=true" alt="polisevo3"></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a> 
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a> 
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>            
-      </div>
-  <!DOCTYPE html>
-<html>
-<head>
-<style>
-.button {
-  border: none;
-  color: yellow;
-  padding: 15px 32px;
-  text-align: centre;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
-</head>
-<body>
-
-<a href="https://hpmurah2u.github.io/hpmurah2u.github.io-livetv/" class="button">More Movies >></a>
-
-
-</body>
-</html>
-
-
-
-  
-
-      <h1 id="movies">TV Series</h1>
-      <div class="box">
-        <a href="https://hpmurah2u.github.io/hpmurah2u.github.io-mh370/"><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/Mh370%20290x157.jpg?raw=true" alt="mh370"></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a> 
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>                
-      </div>
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.button {
-  border: none;
-  color: yellow;
-  padding: 15px 32px;
-  text-align: centre;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
-</head>
-<body>
-
-<a href="https://hpmurah2u.github.io/hpmurah2u.github.io-livetv/" class="button">More TV Series >></a>
-
-
-</body>
-</html>
-
-
-
-
-      <h1 id="originals">VOD</h1>
-      <div class="box">
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a> 
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>  
-        <a href=""><img src="https://raw.githubusercontent.com/hpmurah2u/pejal/PEJAL/coming%20soon%20ejaltv%20pic.png?raw=true" alt=""></a>                
-      </div>
-  <!DOCTYPE html>
-<html>
-<head>
-<style>
-.button {
-  border: none;
-  color: yellow;
-  padding: 15px 32px;
-  text-align: centre;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-</style>
-</head>
-<body>
-
-<a href="https://hpmurah2u.github.io/hpmurah2u.github.io-livetv/" class="button">More VOD >></a>
-
-
-</body>
-</html>
-
-
-
-  
-    <!-- END OF MAIN CONTAINER -->
-
-   
-    <!-- FOOTER -->
-    <footer>
-      <p><font size="4" color="#ffffff">&copy 2023-2025 EjalTV</font></p>
-    
-    </footer>
-  </div>
-   <script src="https://dunggramer.github.io/disable-devtool/disable-devtool.min.js" defer></script>
-   
-   <!DOCTYPE html>
-<html>
-<head>
-<style>
-body 
-
-h1 {
-  color: white;
-  font-size: 27px;
-}
-
-</style>
-</head>
-<body>
-</body>
-</html>
+    <div class="footer">
+        <a href="#">Contact Us</a> |
+        <a href="#">TOS</a> |
+        <a href="#">DMCA</a> |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Disclaimer</a>
+        <p>&copy; 2023-2025 EJALTV</p>
+    </div>
 
 </body>
 </html>
